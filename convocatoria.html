@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     
+</head>
+
+<body>
+    <!-- Modal Structure -->
+    <div id="eliminar" class="modal">
+      <div class="modal-content">
+        <h4>ELIMINAR /Inactivar convocatoria </h4>
+        <p>¿Estas seguro de eliminar o inactivar la convocatoria?</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">aceptar</a>
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">cerrar</a>
+      </div>
+    </div>
+    
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Convocatoria</h4>
+        <div class="modal-body">
+          <div class="row">
+            <div class="col s2">
+              <div class="form-group">
+                <label class="control-label" for="exampleInputEmail1">Clave:</label>
+                <input class="form-control" id="exampleInputEmail1" placeholder="FOPER-01" type="text" readonly="readonly">
+                 </div>
+                    </div>
+                     <div class="col s3">
+              <div class="form-group">
+                <label class="control-label" for="exampleInputEmail1">Año con:</label>
+                <select class="form-control">
+                  <option>-Seleccione-</option>
+                  <option>2020</option>
+                  <option>2021</option>
+                  <option>2022</option>
+                  <option>2023</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col S10">
+              <div class="form-group">
+                <label class="control-label" for="exampleInputEmail1">Descripción:</label>
+                <input class="form-control" id="descripcion" placeholder="" type="text">
+              </div>
+            </div>
+            <div class="col s4">
+              <div class="form-group">
+                <label class="control-label" for="exampleInputEmail1">Beca:</label>
+                <select class="form-control">
+                  <option>-Seleccione-</option>
+                  <option>Foper</option>
+                  <option>Estudiantes Indigenas</option>
+                  <option>Discapacidad</option>
+                  <option>Madres y Padres solteros</option>
+                </select>
+              </div>
+            </div>
+              <div class="col s4">
+                <label class ="control-label" for ="exampleInputEmail1" >Tipo:</label>
+                <select class ="form-control">
+                  <option>Publica</option>
+                  <option>Privada</option>
+                    
+                  </select>
+              </div>
+              <div class="col s4">
+                <label class ="control-label" for ="exampleInputEmail1" >Nivel:</label>
+                <select class ="form-control">
+                  <option>-Seleccione-</option>
+                  <option>Bachillerato</option>
+                  <option>Licenciatura</option>
+                  <option>Maestría</option>
+                  <option>Especialidad</option>
+                  <option>Doctorado</option>
+                  </select>
+              </div>
+              <div class="col s4">
+                <label class ="control-label" for ="exampleInputEmail1" >Status:</label>
+                <select class ="form-control">
+                  <option>-Seleccione-</option>
+                    <option>Pendiente</option>
+                    <option>Vigente</option>
+                    <option>Cerrada</option>
+                    <option>Inactiva</option>
+                  </select>
+              </div>
+              <div class="input-field col s4">
+                <i class="material-icons prefix">calendar_today</i>
+                <input id="icon_prefix" type="text" class="validate"placeholder="01-02-2020">
+                <label for="icon_prefix">Fecha Inicio Publicación:</label>
+              
+              </div>
+              <div class="input-field col s4">
+                <i class="material-icons prefix">calendar_today</i>
+                <input id="icon_prefix" type="text" class="validate"placeholder="15-02-2020">
+                <label for="icon_prefix">Fecha Inicio Publicación:</label>
+              
+              </div>
+              <div class="input-field col s4">
+                <i class="material-icons prefix">calendar_today</i>
+                <input id="icon_prefix" type="text" class="validate"placeholder="03-03-2020">
+                <label for="icon_prefix">Fecha Inicio Publicación:</label>
+              
+              </div>
+              <div class="input-field col s4">
+                <i class="material-icons prefix">calendar_today</i>
+                <input id="icon_prefix" type="text" class="validate"placeholder="15-07-2020">
+                <label for="icon_prefix">Fecha Inicio Publicación:</label>
+              
+              </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!"  class="modal-close waves-effect waves-green btn-flat style= blue">cerrar</a>
+      </div>
+    </div>
+    
+    <div class="container">
+        <div class="row">
+      <div class="col s12 "><h4> Convocatorias</h4></div>
+    </div>
+
+
+  </div >
+
+
+
+<div section>
+<div class="container">
+    <div class="row">
+  <div class="col s3"> 
+    <label class="control-label" for="exampleInputEmail1">Clave</label>
+  <input class="form-control" id="exampleInputEmail1" placeholder="" type="text">
+</div>
+<div class="row">
+    <div class="col s3"> 
+        <label class="control-label" for="exampleInputEmail1">Descripcion</label>
+    <input class="form-control" id="exampleInputEmail1" placeholder="" type="text">
+  </div>
+  <div class="row">
+    <div class="input-field col s3">
+      <i class="material-icons prefix">calendar_today</i>
+      <input id="icon_prefix" type="text" class="validate datepicker"placeholder="01-02-2020">
+      <label for="icon_prefix">Fecha Inicio :</label>
+    
+    </div>
+    
+    <div class="input-field col s3">
+      <i class="material-icons prefix">calendar_today</i>
+      <input id="icon_prefix" type="text" class="validate datepicker"placeholder="01-02-2020">
+      <label for="icon_prefix">Fecha fin:</label>
+    
+    </div>
+
+
+  <div class="input-field col s4">
+    <label class="control-label" for="exampleInputEmail1">Beca:</label>
+    <select>
+        
+      <option value="" disabled selected></option>
+      <option value="1">Foper</option>
+      <option value="2">Estudiantes Indigenas</option>
+      <option value="3">Discapacidad</option>
+      <option value="4">Madres y Padres solteros</option>
+    </select>
+   
+  </div>
+
+  
+  <div class="input-field col s4">
+    <label class="control-label" for="exampleInputEmail1">Tipo:</label>
+    <select>
+      <option value="" disabled selected></option>
+      <option value="1">Pública</option>
+      <option value="2">Privada</option>
+    </select>
+  </div>
+
+  <div class="input-field col s4">
+    <label >Estatus:</label>
+    <select name ="TipoBeca" id="TipoBeca">
+      <option value="" enable selected></option>
+      <option value="1">-Seleccione-</option>
+      <option value="2">Pendiente</option>
+      <option value="3">Vigente</option>
+      <option value="4">Cerrada</option>
+      <option value="4">Inactiva</option>
+    </select>
+   
+  </div>
+  </div>
+  <div class ="input-field col s12 right-align  " >
+
+    <button type="button"  id="buscar" class="waves-effect waves-light btn style= blue"   margin-top: 25px; >
+      <i class="fa fa-search"></i>Buscar<i class="material-icons right">search</i></button>
+  </div>
+  
+</div>
+<div class="section text-left right-align">
+    <div class="container">
+      <button type="button"  id="Agregar" class="waves-effect waves-light btn style= green limen btn modal-trigger" href="#modal1"margin-top: 25px; >
+        <i class="fa fa-search"></i>Agregar<i class="material-icons right">add</i></button>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Clave</th>
+                <th>Descripción</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th>Tipo</th>
+                <th>Estatus</th>
+                <th>Opciones</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                  <td>4568</td>
+                  <td>Foper 2020</td>
+                  <td>01/02/2020</td>
+                  <td>01/03/2020</td>
+                  <td>Publica</td>
+                  <td>Pendiente</td>
+                  <td>
+                  <!-- Modal Trigger -->
+                  <a class= "btn-floating btn-large waves-effect waves-light orange modal-trigger" class="material-icons"href="#modal1">
+                    <i class="material-icons right">edit</i>
+                    <i class="fa -ol fa-users"></i> 
+                  </a>      
+              
+                    
+                  
+                  <a  class="btn-floating btn-large waves-effect waves-light blue" class="material-icons" href="google.com" >
+                    <i class="material-icons right">people</i>
+                    <i class="fa -ol fa-users"></i> 
+                    
+                  </a>
+                  <a class= "btn-floating btn-large waves-effect waves-light red modal-trigger" class="material-icons"href="#eliminar">
+                    <i class="material-icons right">clear</i>
+                    <i class="fa -ol fa-users"></i> 
+                  </a></td>
+                  </tr>
+                  <tr>
+                  <td>7859</td>
+                  <td>Estudiantes Indigenas 2020</td>
+                  <td>01/02/2020</td>
+                  <td>01/03/2020</td>
+                  <td>Publica</td>
+                  <td>Vigente</td>
+                 <joaquin.aguilar@uaq.com></joaquin.aguilar>
+                  
+                    <td> <a class= "btn-floating btn-large waves-effect waves-light orange modal-trigger" class="material-icons"href="#modal1">
+                      <i class="material-icons right">edit</i>
+                      <i class="fa -ol fa-users"></i> 
+                    </a>
+                  <a  class="btn-floating btn-large waves-effect waves-light blue" class="material-icons" href="google.com" >
+                    <i class="material-icons right">people</i>
+                    <i class="fa -ol fa-users"></i> 
+                    
+                    
+                    <a class="btn-floating btn-large waves-effect waves-light cyan" data-toggle="" data-target="" href="google.com">
+                      <i class="material-icons right">settings</i>
+                      <i class="fa s fa-cog"></i>
+                    </a>
+                  </a>
+                  <a class= "btn-floating btn-large waves-effect waves-light red modal-trigger" class="material-icons"href="#eliminar">
+                    <i class="material-icons right">clear</i>
+                    <i class="fa -ol fa-users"></i> 
+                  </a></td>
+                 </tr>
+                 <tr>
+                  <td>Madres y <p>Padres Solteros 2020</p> ></td>
+                  <td>Lollipop</td>
+                  <td>01/02/2020</td>
+                  <td>01/03/2020</td>
+                  <td>Privada</td>
+                  <td>Cerrada</td>
+                  <td> <a class= "btn-floating btn-large waves-effect waves-light orange modal-trigger" class="material-icons"href="#modal1">
+                    <i class="material-icons right">edit</i>
+                    <i class="fa -ol fa-users"></i> 
+                  </a>
+                  <a  class="btn-floating btn-large waves-effect waves-light blue" class="material-icons" href="google.com" >
+                    <i class="material-icons right">people</i>
+                    <i class="fa -ol fa-users"></i> 
+                    
+                    
+                    <a class="btn-floating btn-large waves-effect waves-light cyan" data-toggle="" data-target="" href="google.com">
+                      <i class="material-icons right">settings</i>
+                      <i class="fa s fa-cog"></i>
+                    </a>
+                  </a>
+                  <a class= "btn-floating btn-large waves-effect waves-light red modal-trigger" class="material-icons"href="#eliminar">
+                    <i class="material-icons right">clear</i>
+                    <i class="fa -ol fa-users"></i> 
+                  </a>
+                </td>
+                </tr>
+              </tbody>
+
+
+
+              <div class="modal fade" id="eliminar" draggable="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                      <h4 class="modal-title">Eliminar/Inactivar convocatoria</h4>
+                    </div>
+
+</div>
+
+
+</div>
+
+      
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+
+  // Or with jQuery
+
+  $(document).ready(function(){
+    $('select').formSelect();
+    $('.datepicker').datepicker();
+    $('.modal').modal();
+    $('input#input_text, textarea#textarea2').characterCounter();
+  });
+
+  </script>
+</body>
+</html>
